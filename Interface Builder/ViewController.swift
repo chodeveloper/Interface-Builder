@@ -9,6 +9,7 @@
 import Cocoa
 
 class ViewController: NSViewController {
+    
     @IBOutlet weak var txtName: NSTextField!
     @IBOutlet weak var lblName: NSTextField!
     
@@ -19,7 +20,9 @@ class ViewController: NSViewController {
     }
 
     @IBAction func buttonPressed(_ sender: Any) {
+        lblName.stringValue = "Hello \(txtName.stringValue) !"
     }
+    
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
